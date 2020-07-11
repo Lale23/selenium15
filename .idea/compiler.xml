@@ -6,8 +6,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="selenium15" />
+        <module name="Tuba" />
+        <module name="Marina" />
+        <module name="Ramazannn" />
+        <module name="Arif" />
+        <module name="Lale" />
+        <module name="Shevgin" />
+        <module name="ilkham" />
+        <module name="Zeynep" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Ramazan" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

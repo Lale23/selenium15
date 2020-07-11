@@ -1,0 +1,141 @@
+driver.getTitle() -->
+	- Returns the title of the page as a String
+
+driver.getCurrentUrl() -->
+	- Returns the currentURL of the page as a String
+
+driver.navigate().forward()
+driver.navigate().back()
+driver.navigate().refresh()
+driver.navigate().to("URL")
+
+driver.manage().window().maximize() --> makes the opened browser page full screen
+driver.close() --> closes the currently opened browser page
+driver.quit() --> will close all of the opened browser pages (tabs)
+
+.findElement(By.locator) -->
+	- This method finds and returns a single WebElement
+
+LOCATORS : There are 8 different types of locators in Selenium
+
+	1- name: This locator will be looking into the whole HTML code, and return the WebElement with matching name attribute value
+		- it will find and return the first webelement it finds
+
+.sendKeys("text to be sent here") ==> this method will send the keys to the located web element
+.click();
+
+2- linkText:
+	--> this locator allows us to locate LINKS by their texts
+	--> this locator will ONLY WORK ON LINKS
+	How do I know if the webELement is a link or not?
+		->If it is stored inside of <a>, it is a link
+	<a href="https://www.google.com"> TEXT HERE </a>
+	TagName --> a --> anchor tag --> used for HTML links
+	attribute --> href
+	attribute value --> https://www.google.com
+	LINK TEXT --> TEXT HERE
+	ex: driver.findElement(By.linkText("TEXT HERE"));
+
+	3- partialLinkText:
+
+	4- id:
+    	--> id is unique for that specific web element
+    	--> if you have id and it is not dynamic
+    	 (meaning the attribute value is not changing when you refresh the page) you should always use id
+    	syntax: driver.findElement(By.id("id attribute's value"))
+5- className:
+
+6- tagName :
+	--> usually good for when you want to locate all of the same type of web Elements
+	--> for example : if you want to return all of the links on the page you can use it with findElements
+	syntax : driver.findElement(By.tagName("a"))
+	syntax : driver.findElement(By.tagName("div"))
+
+	.getText() -->
+    	--> This method will be getting the text of the given web element
+    	syntax: how to use this method.
+        	<a id="ubt7" href="https://www.google.com">CLICK HERE TO GOOGLE</a>
+        	driver.findElement(By.id("ubt7")).getText();
+        		--> return "CLICK HERE TO GOOGLE" as a String
+
+    .getAttribute("attribute name") -->
+        	--> This method will be returning the value of given attribute
+        	syntax:
+            	<a id="ubt7" href="https://www.google.com">CLICK HERE TO GOOGLE</a>
+            	driver.findElement(By.linkText("CLICK HERE TO GOOGLE")).getAttribute("id")
+            	returns --> ubt7
+7css
+# means id
+. means class
+> direct child
+* you cannot find element based text
+
+--ıt has its own syntax
+it helps us create custom locaters to locate webelements using different values and attrbıtues
+
+common cssSelectors
+1-tagname[attrubte='value']
+2-tagname.value
+3-tagname#value
+
+        <div class="h461" id="h7">
+            <div name="h131">
+                <a href="https://www.google.com"> Click here to go Google </a>
+            </div>
+        </div
+    To locate the element
+    1-tagname[attr='value']  -- div[class='h461']
+    2-tagname.value          -- div.h461
+    3-tagname#value          -- div#h7 --- #h7
+
+ how do we go from parent to child in css
+
+    A     <div class="h461" id="h7">
+     B        <div name="h131">
+      C           <a href="https://www.google.com"> Click here to go Google </a>
+              </div>
+          </div
+
+ div[class='h461'] locates A
+ div[class='h461'] > div locates B
+ div[class='h461'] > div >a locates C
+
+  how do we go from child to parent in css
+  --not possible
+
+
+
+
+
+8.xpath
+Absolute xpath:
+    -> Starts with : /
+    -> Starts from the very beginning of <html>
+    -> You can only go from parent to child
+Relative xpath:
+    -> Starts with: //
+    -> Looks through everything in the html code
+    -> Returns all matching
+    -> You can start from anywhere in the html code
+    -> Where ever you use // (relative path) is looking to jump and return all the matching results
+        ex : //body//a
+
+//different ways to go path:
+            //tagName[@attribute='value']
+                    // a[@class='nav-link']
+                    //a[@href='/']
+            //tagName[.='text']
+                    //a[.='Home']
+
+              /.. means go from child to the parentt class
+
+
+              syntax : driver.findElement(By.xpath("xpath locator here"));
+              1- //tagName[@attribute='value']
+              2- //tagName[contains(@attribute, 'value')]
+              3- //tagName[.='text']
+
+              1- //tagName[@attribute='value'] --> looks for tag name attribute and value
+              1- //*[@attribute='value'] --> * means look for all of the webElements
+              2- //tagName[contains(@attribute, 'value')] --> locates all web elements with the given value
+              3- //tagName[.='text'] --> looks for exact text match in webElement
