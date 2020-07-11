@@ -8,6 +8,8 @@
     <artifactId>selenium15</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+
+
     <modules>
         <module>Arif</module>
         <module>Lale</module>
@@ -18,6 +20,7 @@
         <module>ilkham</module>
         <module>Ramazannn</module>
         <module>mehmet</module>
+
     </modules>
 
     <properties>
@@ -26,6 +29,7 @@
     </properties>
 
     <dependencies>
+
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>

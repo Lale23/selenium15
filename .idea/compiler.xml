@@ -12,11 +12,13 @@
         <module name="Arif" />
         <module name="Lale" />
         <module name="Shevgin" />
+        <module name="mehmet" />
         <module name="ilkham" />
         <module name="Zeynep" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="cucumber" target="1.8" />
       <module name="Ramazan" target="1.8" />
     </bytecodeTargetLevel>
   </component>
