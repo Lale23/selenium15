@@ -7,11 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Tuba" />
-        <module name="Marina" />
         <module name="Ramazannn" />
         <module name="Arif" />
         <module name="Lale" />
         <module name="Shevgin" />
+        <module name="Marina" />
         <module name="mehmet" />
         <module name="ilkham" />
         <module name="Zeynep" />

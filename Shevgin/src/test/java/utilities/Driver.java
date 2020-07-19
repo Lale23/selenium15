@@ -20,11 +20,11 @@ public class Driver {
 
             switch (browser){
                 case "chrome":
-                    System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ "/chromedriver.exe");
+                    System.setProperty("webdriver.chrome.driver", "C:\\Users\\TOSHIBA\\IdeaProjects\\selenium15\\webdriver.chrome.driver.exe");
                     driver = new ChromeDriver();
                     break;
                 case "firefox":
-                    System.setProperty("webdriver.firefox.driver", "C:\\Users\\TOSHIBA\\IdeaProjects\\seleniumprojectB18\\webdriver.geckodriver.driver.exe");
+                    System.setProperty("webdriver.firefox.driver", "C:\\Users\\TOSHIBA\\IdeaProjects\\selendium15\\webdriver.geckodriver.driver.exe");
                     driver = new FirefoxDriver();
 
                 case "chrome-headless":
@@ -32,7 +32,7 @@ public class Driver {
                     driver = new ChromeDriver(new ChromeOptions().setHeadless(true));
                     break;
                 case "firefox-headless":
-                    System.setProperty("webdriver.firefox.driver", "C:\\Users\\TOSHIBA\\IdeaProjects\\seleniumprojectB18\\webdriver.geckodriver.driver.exe");
+                    System.setProperty("webdriver.firefox.driver", "C:\\Users\\TOSHIBA\\IdeaProjects\\selenium15\\webdriver.geckodriver.driver.exe");
                     driver = new FirefoxDriver(new FirefoxOptions().setHeadless(true));
                     break;
             }
