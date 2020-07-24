@@ -70,6 +70,7 @@ public class userStory2  {
             Driver.getDriver().findElement(By.xpath("//li[@class='dropdown user-menu-dropdown']")).click();
 
             Driver.getDriver().findElement(By.xpath("//a[@href='/user/logout']")).click();
+            //
 
         }
 
